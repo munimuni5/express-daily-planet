@@ -1,0 +1,15 @@
+<h1 class="text-center">Here is where all my articles live</h1>
+<% if(results.length <= 0){ %>
+  <h2 class="text-center">nothing in the database yet</h2>
+<% } else { %>
+  <% results.forEach(function(item){ %>
+    <h3>
+      <a href="/articles/<%= item.id %>">
+        <%= item.title %>
+      </a>
+    </h3>
+    <a href="/articles/<%= item.id %>" class=" btn btn-danger delete-link">
+      Delete post
+    </a>
+  <% }); %>
+<% } %>
