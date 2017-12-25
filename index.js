@@ -14,7 +14,7 @@ app.use('/articles', require('./controllers/articles'));
 
 //Routes
 app.get('/', function(req, res) {
-  res.render('home.ejs');
+  res.render('site/home.ejs');
 });
 
 //Listen on port 3000
